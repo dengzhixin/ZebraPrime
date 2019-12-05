@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/index/index",
+    
+    "pages/uploadProduct/uploadProduct",
+    
+    
+    
+    
+    
+    
+    
+    "pages/good/good",
+    "pages/productSearch/productSearch",
+    "pages/myself/myself",
+    "pages/address/address",
+    "pages/addNewAddress/addNewAddress",
+    "pages/submitOrder/submitOrder",
+    "pages/card/card",
+    "pages/quanyi/quanyi",
+    "pages/product/product",
+    "pages/orderDetail/orderDetail",
+    "pages/myOrder/myOrder"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "ZebraPrime",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8c8c8c",
+    "selectedColor": "#353535",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/house.png",
+        "selectedIconPath": "images/house_active.png"
+      },
+      {
+        "pagePath": "pages/quanyi/quanyi",
+        "text": "权益",
+        "iconPath": "images/zuan.png",
+        "selectedIconPath": "images/zuan_active.png"
+      },
+      {
+        "pagePath": "pages/card/card",
+        "text": "购物车",
+        "iconPath": "images/card.png",
+        "selectedIconPath": "images/card_active.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "个人中心",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_active.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "添加收货地址",
+  "usingComponents": {
+    "wux-button": "../../dist/button/index",
+    "wux-cascader":"../../dist/cascader/index"
+  }
+}

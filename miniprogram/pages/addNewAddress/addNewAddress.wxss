@@ -1,0 +1,25 @@
+.addAddress{
+}
+.card{
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 10rpx;
+  justify-content: center;
+  align-items: center;
+}
+.card input{
+  padding: 20rpx;
+  flex: 1;
+
+}
+.icon{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.btn-save{
+  width: 90%;
+  margin: 0 auto;
+  height: 80rpx;
+  line-height: 80rpx;
+}

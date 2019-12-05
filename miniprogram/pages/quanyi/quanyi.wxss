@@ -1,0 +1,83 @@
+.banner{
+  width: 100%;
+  height: 400rpx;
+  padding-bottom: 0;
+}
+.swiper-item{
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+
+.banner image{
+  width: 100%;
+  height: 100%;
+}
+
+.products{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20rpx;
+}
+.products .product{
+  display: flex;
+  width: 90%;
+  height: 200rpx;
+  background-color: white;
+  border-radius: 8rpx;
+  margin: 0 auto;
+  padding: 20rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+.products .product .img{
+  width: 200rpx;
+  height: 200rpx;
+}
+.products .product .texts{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 8pt;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+  height: 100%;
+}
+.products .product .texts .title{
+  /* margin-bottom: 20rpx; */
+}
+.products .product .texts .subTitle{
+  margin-top: 20rpx;
+  font-weight: bold;
+  font-size: 9pt;
+}
+.products .product .texts .progressBox{
+  margin-top: 20rpx;
+  display: flex;
+}
+.products .product .texts .progressBox .progress{
+  width: 60%;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+}
+.products .product .texts .bottom{
+  display: flex;
+  justify-content: space-between
+}
+.products .product .texts .bottom .price{
+  color: red;
+  font-size: 10pt;
+}
+.products .product .texts .bottom .btn-qiang{
+  font-size: 8pt;
+  font-weight: lighter;
+  width: 150rpx;
+  letter-spacing: 0;
+  text-indent: 0;
+  height: 40rpx;
+  line-height: 40rpx;
+
+}

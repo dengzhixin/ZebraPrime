@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+
+  <swiper class="banner" autoplay="true" circular="true" current="{{bannerCurrent}}" bindchange="bannerChange">
+    <block wx:for="{{banner}}" wx:key="*this">
+
+      <swiper-item class="swiper-item" data-productId="{{item.productId}}" bindtap="onBannerTap">
+        <view class="bannerBgColor" style="background-color:{{bannerCurrentBgColor}}"></view>
+        <image src="{{item.bgUrl}}" mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+
+  </swiper>
+  <view class="scroll-menu-box">
+    <view class="scroll-menu">
+      <view class="scroll-menu-item" wx:for="{{scrollMenu}}" data-isSearch="{{item.isSearch}}" data-navigation="{{item.navigation}}" bindtap="toMenuItem">
+        <view class="scroll-menu-icon" style="background-color:{{item.bgColor}}">
+          <image class="icon" src="{{item.iconUrl}}"></image>
+        </view>
+        <view class="menu-item-name">{{item.name}}</view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="products">
+    <view class="product" wx:for="{{products}}">
+      <image class="img" mode="aspectFill" src="{{item.imgUrl[0]}}"></image>
+      <view class="texts">
+        <view>
+          <text class="title">{{item.title}}</text>
+          <text class="subTitle">{{item.subTitle}}</text>
+          <view class="progressBox">
+            <progress class="progress" percent="{{item.sellNumber/item.sumInventory*100}}" color="#ff0000" />
+            <text>{{item.sellNumber/item.inventory>0.5?'即将售罄':'库存充足'}}</text>
+          </view>
+        </view>
+        <view class="bottom">
+          <text class="price">{{item.price}}</text>
+          <view class="btn-submit btn-qiang" data-id="{{item._id}}" bindtap="goProduct">马上抢</view>
+        </view>
+
+
+      </view>
+    </view>
+
+  </view>
+  <mp-loading ext-class="loading" type="dot-gray" animated="true" duration="{{1000}}" show="{{bottomLoading}}"></mp-loading>
+</view>

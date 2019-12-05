@@ -1,0 +1,199 @@
+.product {
+  width: 100%;
+  margin-bottom: 100rpx;
+
+}
+
+
+
+.priceBox {
+  background-color: #ebb356;
+  width: 100%;
+  display: flex;
+  height: 120rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.priceBox .left {
+  width: 70%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.priceBox .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.05;
+  filter: invert(100%);
+  width: 100%;
+}
+
+.priceBox .left .content {
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.priceBox .left .price {
+  font-size: 18pt;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.priceBox .left .texts {
+  display: flex;
+  font-size: 10pt;
+}
+
+.priceBox .left .texts .oldPrice .num {
+  text-decoration: line-through;
+}
+
+.priceBox .left .texts .near {
+  background-color: #fabf6d;
+  margin-left: 20rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  border-radius: 8rpx;
+}
+
+.priceBox .right {
+  width: 30%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14pt;
+}
+
+.priceBox .right image {
+  width: 60%;
+}
+.card{
+  width: 100%;
+  background-color: white;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 10pt;
+  display: flex;
+  justify-content: space-between
+}
+.title {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.card .left{
+  display: flex;
+}
+.card .left .content{
+  display: flex;
+  padding-left: 40rpx
+}
+.card .right{
+  color: rgba(0,0,0,0.2);
+
+}
+.productCard .subTitle{
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.productCard{
+  width: 100%;
+  background-color: white;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.tags .tag{
+  padding: 4rpx 6rpx;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  margin-right: 10rpx;
+  border-radius: 6rpx;
+  
+
+}
+.buyBar{
+  justify-content: flex-end;
+
+}
+.btn-buy{
+  margin: 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  box-sizing: border-box;
+  font-size: 10pt;
+  padding: 0 10rpx;
+
+}
+.btn-black{
+  background-color: #1a1a1a
+}
+.marginRight{
+  margin-right: 30rpx;
+}
+.skuSelectorBox{
+  width: 100%;
+  height: calc(100vh - 100rpx);
+
+  margin-bottom: 100rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+  left: 0;
+  top: 0;
+  position: fixed;
+  box-shadow: 0 -1rpx 10rpx rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1;
+
+}
+.skuSelectorBox .skuSelector{
+padding: 40rpx;
+box-sizing: border-box;
+width: 100%;
+background-color: white;
+border-top-left-radius: 20rpx;
+border-top-right-radius: 20rpx;
+  font-size: 10pt;
+
+position: relative;
+}
+.skuSelector .iconImg{
+  width: 200rpx;
+  height: 200rpx;
+  border: 10rpx solid white;
+  position: relative;
+  left: 20rpx;
+  top: -80rpx;
+}
+.skuSelector .current{
+  position: absolute;
+left: 300rpx;
+top: 40rpx;
+}
+.skuSelector .current text{
+  padding-right: 10rpx;
+}
+.skuSelector .sku{
+  margin-bottom: 20rpx;
+}
+.skuSelector .sku .key{
+  padding:4rpx 20rpx;
+  padding-right: 20rpx;
+  
+}
+.skuSelector .sku .item{
+  padding:4rpx 20rpx;
+  border: 2rpx solid rgba(0, 0, 0, 0.1);
+  margin-right: 10rpx;
+
+}

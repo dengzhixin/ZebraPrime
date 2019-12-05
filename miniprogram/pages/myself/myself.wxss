@@ -1,0 +1,135 @@
+.top {
+  position: relative;
+  width: 100%;
+  height: 440rpx;
+}
+
+.topCard {
+  width: 100%;
+  height: 400rpx;
+  background-color: #353535;
+  overflow: hidden;
+  border-bottom-left-radius: 80rpx;
+  border-bottom-right-radius: 80rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.topCard .left {
+  position: absolute;
+  left: 2.5%;
+  top: 80rpx;
+  color: rgba(255, 255, 255, 1);
+}
+
+.topCard .left .nickName {
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+.topCard .left .vip {
+  font-size: 8pt;
+  padding-top: 10rpx;
+  opacity: 0.9;
+}
+
+.topCard .left .vip .level {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  left: -5rpx;
+  top: 10rpx;
+}
+
+.topCard .userAvatar {
+  position: absolute;
+  right: 40rpx;
+  top: 80rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: rgba(255, 255, 255, 0.3) solid 4px;
+  overflow: hidden;
+}
+
+.topCard .bg {
+  width: 100%;
+  opacity: 0.1;
+  transform: rotate(30deg) scale(2);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.top .zebraVip {
+  width: 95%;
+  height: 100rpx;
+  position: absolute;
+  bottom: 20rpx;
+  left: 2.5%;
+  border-radius: 4px;
+  display: flex;
+  background: linear-gradient(90deg, #ffed68, #eeff5f);
+}
+
+.top .zebraVip .text {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+}
+
+.top .text .main {
+  font-size: 10pt;
+  color: #333;
+  font-weight: bold;
+}
+
+.top .text .sub {
+  font-size: 8pt;
+  color: #333;
+}
+
+.top .zebraVip .btnBox {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top .zebraVip .buyBtn {
+  font-size: 10pt;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.tools {
+  width: 95%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 6rpx;
+  font-size: 6pt;
+  justify-content: space-around;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.tools .icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}
+.kf{
+  position: relative;
+}
+.btn-kf{
+  opacity: 0;
+  position: absolute;
+  width: 100rpx;
+  left: 0;top: 0;
+}

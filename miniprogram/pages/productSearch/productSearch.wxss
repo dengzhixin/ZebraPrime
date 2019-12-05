@@ -1,0 +1,30 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products .product {
+  width: 46%;
+  height: 500rpx;
+  box-sizing: border-box;
+  background-color: white;
+  font-size: 10pt;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+.products .product image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.none {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.none image{
+  width: 60%;
+}

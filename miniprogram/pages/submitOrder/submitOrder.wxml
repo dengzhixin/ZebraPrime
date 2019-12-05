@@ -1,0 +1,47 @@
+<view class="submitOrderBox">
+  <view class="address layout-row" bindtap="toAddress">
+    <image class="icon iconDw" src="../../images/icon_dw.png"></image>
+    <view class="layout-col texts">
+      <view class="layout-row names">
+        <view>收货人：{{address[activeAddress].name}}</view>
+        <view>{{address[activeAddress].phone}}</view>
+      </view>
+      <view class="detailAddress">
+        收货地址：{{address[activeAddress].address}}</view>
+    </view>
+    <image class="icon-small" src="../../images/icon_right.png"></image>
+  </view>
+  <view class="products layout-col">
+    <view class="product layout-row" wx:for="{{product}}">
+      <image mode="aspectFill" src="{{item.imgUrl[0]}}"></image>
+      <view class="texts layout-col">
+        <view class="title">{{item.title}}</view>
+
+        <view class="layout-row sku">
+          <view class="item" wx:for="{{item.sku}}" wx:for-index="key">
+            <text> {{key}}:{{item}}</text>
+          </view>
+        </view>
+        <view class="layout-row prices">
+          <view class="price">{{item.price}}</view>
+          <view class="num">x{{item.num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="layout-row buyerMessage">
+    <view class="tag">买家留言:</view>
+    <input type="text" value="{{buyerMessage}}" placeholder="选填" bindinput="buyerMessageChange"></input>
+  </view>
+</view>
+
+
+<view class="bottomBar submitOrderBar">
+  <view class="layout-row texts">
+    合计
+    <view style="color:red">{{sumPrice-sumMaxDeduction}}</view>
+    <view class="deduction" wx:if="{{sumMaxDeduction>0}}">抵扣{{sumMaxDeduction}}元</view>
+  </view>
+  <view class="btn-submit submitOrder" bindtap="submitOrder">提交订单</view>
+</view>

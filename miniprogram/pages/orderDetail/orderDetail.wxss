@@ -1,0 +1,86 @@
+.state {
+  position: relative;
+  overflow: hidden;
+  height: 200rpx;
+}
+
+.state text {
+  line-height: 200rpx;
+  padding-left: 40rpx;
+}
+
+.bg {
+  width: 100%;
+  opacity: 0.1;
+  transform: rotate(30deg) scale(2);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.address {
+  background-color: white;
+  margin-bottom: 20rpx;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.address .icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.iconDw {
+  margin: 20rpx;
+}
+
+.address .texts {
+  font-size: 10pt;
+  flex: 1;
+  padding-right: 10rpx;
+}
+
+.address .texts .names {
+  justify-content: space-between;
+}
+
+.address .texts .detailAddress {
+  font-size: 8pt;
+}
+
+.products image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.products .product {
+  background-color: white;
+  margin-bottom: 10rpx;
+  padding: 20rpx;
+}
+
+.products .product .texts {
+  font-size: 10pt;
+  flex: 1;
+  justify-content: space-between;
+  padding-left: 20rpx;
+}
+
+.products .product .texts .prices {
+  justify-content: space-between;
+}
+
+.products .product .texts .price {
+  color: red;
+}
+
+.realSumPrice {
+  text-align: right;
+  padding: 20rpx;
+  font-size: 10pt;
+}
+
+.sku text{
+  margin-right:20rpx;
+  color: rgba(0, 0, 0, 0.5)
+}

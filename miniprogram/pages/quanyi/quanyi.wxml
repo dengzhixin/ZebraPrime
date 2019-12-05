@@ -1,0 +1,31 @@
+<!--pages/quanyi/quanyi.wxml-->
+<wxs module="filters" src="../util/tofix.wxs"></wxs>
+  <swiper class="banner" autoplay="true" circular="true" current="{{bannerCurrent}}" bindchange="bannerChange">
+    <block wx:for="{{banner}}" wx:key="*this">
+
+      <swiper-item class="swiper-item">
+        <image src="{{item.bgUrl}}" mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+
+  </swiper>
+
+    <view class="products">
+    <view class="product" wx:for="{{products}}">
+      <image class="img" mode="aspectFill" src="{{item.imgUrl[0]}}"></image>
+      <view class="texts">
+        <view>
+          <text class="title">{{item.title}}</text>
+          <text class="subTitle">{{item.subTitle}}</text>
+       
+        </view>
+        <view class="bottom">
+          <text class="price">￥{{filters.toFix(item.price - item.maxDeduction)}}</text>
+          <view class="btn-submit btn-qiang" data-id="{{item._id}}" bindtap="goProduct">积分购</view>
+        </view>
+
+
+      </view>
+    </view>
+
+  </view>

@@ -1,0 +1,40 @@
+
+.order{
+  background-color: white;
+  width: 100%;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 10pt;
+}
+.order .createTime{
+  margin-bottom: 10rpx;
+
+}
+.product{
+  margin-bottom: 10rpx;
+
+}
+.product image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.product .texts{
+  padding-left: 20rpx;
+  width: 400rpx;
+
+}
+.btn-view{
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 10rpx;
+  width: 140rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 10pt;
+  align-self: flex-end;
+
+}
+.sku text{
+  margin-right:20rpx;
+  color: rgba(0, 0, 0, 0.5)
+}

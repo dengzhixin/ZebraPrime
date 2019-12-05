@@ -1,0 +1,61 @@
+<wux-cell-group title="商品封面">
+  <swiper class="productImg" circular="true" current="{{swiperCurrent}}">
+    <swiper-item wx:for="{{product.imgUrl}}" wx:key="{{item}}">
+      <image mode="aspectFill" src="{{item}}"></image>
+    </swiper-item>
+    <swiper-item>
+      <image style="padding-left:10%;width:80%" mode="aspectFit" src="../../images/upload.png" bindtap="uploadSwiperItem"></image>
+    </swiper-item>
+
+  </swiper>
+</wux-cell-group>
+<wux-cell-group title="商品信息">
+  <wux-cell hover-class="none">
+    <wux-input label="标题" placeholder="请输入标题" value="{{product.title}}" bind:change="onTitleInput" />
+  </wux-cell>
+  <wux-cell hover-class="none">
+    <wux-input label="价格" placeholder="请输入价格" value="{{product.price}}" bind:change="onPriceInput" />
+  </wux-cell>
+  <wux-cell hover-class="none">
+    <wux-input label="原价" placeholder="请输入原价" value="{{product.oldPrice}}"
+    bind:change="onOldPriceInput" />
+  </wux-cell>
+  <wux-cell hover-class="none">
+    <wux-input label="返积分" type="number" placeholder="请输入积分" value="{{product.integral}}" bind:change="onIntegralInput"/>
+  </wux-cell>
+  <wux-cell hover-class="none">
+    <wux-input label="库存" type="number" placeholder="请输入库存" value="{{product.sumInventory}}" bind:change="onSumInventoryInput"/>
+  </wux-cell>
+   <wux-cell hover-class="none">
+    <wux-input label="最大抵扣" type="number" placeholder="请输入最大抵扣" value="{{product.maxDeduction}}" bind:change="onMaxDeductionInput"/>
+  </wux-cell>
+  <wux-cell hover-class="none">
+    <wux-input label="销量" type="number" placeholder="请输入起始销量" value="{{product.sellNumber}}" bind:change="onSellNumberInput"/>
+  </wux-cell>
+</wux-cell-group>
+<wux-cell-group title="商品分类标签">
+  <wux-checkbox-group name="f" value="{{ product.tags }}" options="{{ tagList }}" title="Options" bind:change="onTagsChange" />
+</wux-cell-group>
+
+
+<wux-cell-group title="商品详情">
+  <view class="toolbar" catchtouchend="format">
+    <i class="iconfont icon-editor-image" catchtouchend="insertImage"></i>
+    <i class="iconfont icon-editor-hr" catchtouchend="insertDivider"></i>
+    <i class="iconfont icon-h2 {{formats.header === 2 ? 'ql-active' : ''}}" data-name="header" data-value="{{2}}"></i>
+    <i class="iconfont icon-h3 {{formats.header === 3 ? 'ql-active' : ''}}" data-name="header" data-value="{{3}}"></i>
+    <i class="iconfont icon-jiacu {{formats.bold ? 'ql-active' : ''}}" data-name="bold"></i>
+    <i class="iconfont icon-qingxie {{formats.italic ? 'ql-active' : ''}}" data-name="italic"></i>
+    <i class="iconfont icon-editor-underline {{formats.underline ? 'ql-active' : ''}}" data-name="underline"></i>
+    <i class="iconfont icon-editor-list-numbers {{formats.list === 'ordered' ? 'ql-active' : ''}}" data-name="list" data-value="ordered"></i>
+    <i class="iconfont icon-editor-align-justify {{formats.list === 'bullet' ? 'ql-active' : ''}}" data-name="list" data-value="bullet"></i>
+    <i class="iconfont icon-editor-undo" catchtouchend="undo"></i>
+    <i class="iconfont icon-editor-redo" catchtouchend="redo"></i>
+
+  </view>
+  <view class="container">
+    <editor id="editor" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady">
+    </editor>
+  </view>
+</wux-cell-group>
+<button type="primary" bindtap="uploadProduct">上架</button>

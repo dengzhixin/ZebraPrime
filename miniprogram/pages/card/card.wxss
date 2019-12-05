@@ -1,0 +1,109 @@
+.radio-group {
+  margin: 20rpx;
+  margin-bottom: 100rpx;
+}
+
+.cardBox {
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 6px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 10pt;
+}
+
+.card .seller {
+  font-weight: bold;
+  width: 50%;
+}
+
+.card .main {
+  display: flex;
+}
+
+.card .main .icon {
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 10px;
+}
+
+.card .main .texts {
+  padding-top: 20rpx;
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.card .main .texts .sku .item{
+  margin-right: 20rpx;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 8pt;
+}
+
+.card .main .texts .price {
+  color: red;
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+.card .main .texts .bom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .main .texts .bom .number {
+  display: flex;
+  border: 1rpx solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.card .main .texts .number .num {
+  padding: 0 16rpx;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.card .main .texts .number .reduce {
+  border-right: 1rpx solid rgba(0, 0, 0, 0.1);
+  padding: 0px 16rpx;
+}
+
+.card .main .texts .number .increase {
+  border-left: 1rpx solid rgba(0, 0, 0, 0.1);
+  padding: 0px 16rpx;
+}
+
+
+
+.bottomBar .submitBox {
+  display: flex;
+  font-size: 6pt;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 20rpx;
+}
+
+.bottomBar .submitBox .zong {
+  color: black;
+  font-size: 8pt;
+  margin: 0 10rpx;
+}
+
+.bottomBar .submitBox .price {
+  color: red;
+  font-size: 10pt;
+  font-weight: bold;
+  margin-right: 20rpx;
+}
+
+.bottomBar .submitBox .btn_sub {
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}

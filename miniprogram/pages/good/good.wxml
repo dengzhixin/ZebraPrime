@@ -1,0 +1,9 @@
+<view class="good layout-col">
+  <image mode="aspectFit" src="../../images/logo.png"></image>
+
+  <textarea placeholder="写下您的评价或建议" value="{{text}}" bindinput="onText"></textarea>
+  <view class="rater ">
+    <wux-rater slot="footer" default-value="{{ start }}" star="☻" active-color="#ff0000" bind:change="raterChange"/>
+  </view>
+  <view class="btn-submit" bindtap="submit">提交</view>
+</view>

@@ -1,0 +1,55 @@
+<view class="top">
+  <view class="topCard">
+    <image mode="aspectFill" class="bg" src="../../images/zebraBg.png"></image>
+    <view class="left">
+      <view class="nickName">
+        <open-data type="userNickName"></open-data>
+      </view>
+      <view class="vip">会员积分{{userInfo.sumIntegral}}/{{levelRouLe[userInfo.level]}}
+        <image class="level" src="../../images/l{{userInfo.level}}.png"></image>
+      </view>
+      <progress percent="{{userInfo.integral/levelRouLe[userInfo.level]*100}}" color="#fffd82" />
+      <view class="vip">当前可用积分:{{userInfo.integral}}</view>
+      
+    </view>
+    <view class="userAvatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+
+  </view>
+  <view class="zebraVip" bindtap="toQuanyi" wx:if="{{userInfo.sumIntegral<=0}}">
+    <view class="text">
+      <text class="main">斑马会员，立即升级</text>
+      <text class="sub">预计为您节省￥19268/元</text>
+    </view>
+    <view class="btnBox">
+      <button size="mini" class="buyBtn">立即购买</button>
+    </view>
+
+  </view>
+
+
+</view>
+<view class="layout-row tools">
+  <view class="layout-col" bindtap="toMyOrder">
+    <image class="icon" src="../../images/icon_myOrder.png"></image>
+    <text>我的订单</text>
+  </view>
+  <view class="layout-col" bindtap="toAddress">
+    <image class="icon" src="../../images/icon_address.png"></image>
+    <text>收货地址</text>
+  </view>
+  <view class="layout-col" bindtap="toGood">
+    <image class="icon" src="../../images/icon_good.png"></image>
+    <text>给我评分</text>
+  </view>
+  <view class="layout-col kf" bindtap="toKf">
+    <image class="icon" src="../../images/icon_help.png"></image>
+    <text>帮助与客服</text>
+
+<button class="btn-kf" plain="true" type="default" size="mini" open-type="contact"> 帮助</button>
+
+  </view>
+    
+
+</view>

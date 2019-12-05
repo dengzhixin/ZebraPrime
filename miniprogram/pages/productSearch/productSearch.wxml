@@ -1,0 +1,13 @@
+<wux-search-bar clear maxlength="20" value="{{ searckKeyword }}" controlled placeholder="Search" bind:confirm="onConfirm" />
+
+<view class="products" wx:if="{{products.length>0}}">
+  <view class="product layout-col" wx:for="{{products}}" data-id="{{item._id}}" bindtap="toProduct">
+    <image class="img" mode="aspectFill" src="{{item.imgUrl[0]}}"></image>
+    <text class="title">{{item.title}}</text>
+    <text class="price" style="color:red">￥{{item.price}}</text>
+
+  </view>
+</view>
+<view wx:if="{{showEmpty && products.length==0}}" class="none">
+  <image mode="aspectFit" src="../../images/none.png"></image>
+</view>

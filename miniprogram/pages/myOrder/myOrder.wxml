@@ -1,0 +1,28 @@
+<wxs module="dateUtil" src="./timeUtil.wxs">
+</wxs>
+<view class="orders">
+
+  <view wx:for="{{orders}}" class="layout-col order" >
+    <view class="layout-row">
+      <view class="createTime">创建时间{{dateUtil.dateFormat(item.createTime)}}</view>
+
+    </view>
+    <view class="product layout-col" wx:for="{{item.products}}" wx:for-item="product">
+      <view class="layout-row">
+        <image mode="aspectFill" src="{{product.product.imgUrl[0]}}"></image>
+        <view class="texts layout-col" >
+         <view >{{product.product.title}}</view>
+        <view class="layout-row sku">
+              <view class="item" wx:for="{{product.ssku}}" wx:for-index="key">
+                <text> {{key}}:{{item}}</text>
+              </view>
+        </view>
+        </view>
+       
+      </view>
+    </view>
+    <view class="btn-submit btn-view" data-index="{{index}}" bindtap="toOrderDetail">查看</view>
+  </view>
+
+
+</view>

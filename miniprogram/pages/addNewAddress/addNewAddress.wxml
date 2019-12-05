@@ -1,0 +1,25 @@
+<wux-cascader visible="{{ visible1 }}" default-value="{{ value1 }}" title="所在地区" options="{{ options1 }}" bind:close="onClose1" bind:change="onChange1" />
+
+<view class="layout-col addAddress">
+  <view class="layout-row card">
+    <input placeholder="收货人" value="{{name}}" bindinput="nameChange"></input>
+    <image class="icon" src="../../images/icon_user.png"></image>
+  </view>
+  <view class="layout-row card">
+    <input type="number" value="{{phone}}" placeholder="手机号码" bindinput="phoneChange"></input>
+    <image class="icon" src="../../images/icon_phone.png"></image>
+
+  </view>
+  <view class="layout-row card">
+    <input value="{{region}}" placeholder="地区选择" disabled="true" bindtap="openSelect"></input>
+    <image class="icon" src="../../images/icon_select.png"></image>
+
+  </view>
+
+  <view class="layout-row card">
+    <input value="{{address}}" bindinput="addressChange" placeholder="详细"></input>
+    <image class="icon" src="../../images/icon_house.png"></image>
+  </view>
+  <view class="btn-submit btn-save" bindtap="save">保存</view>
+
+</view>

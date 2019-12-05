@@ -1,0 +1,21 @@
+/* miniprogram/pages/address/address.wxss */
+.card{
+  background-color: white;
+  padding: 20rpx;
+  align-items: center;
+}
+.texts{
+  flex: 1;
+  font-size: 11pt;
+}
+.texts .phone{
+  color: rgba(0, 0, 0, 0.4);
+  padding-left: 20rpx;
+  
+}
+.card .btn-edit{
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 10pt;
+  padding-left: 20rpx;
+}

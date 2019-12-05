@@ -1,0 +1,17 @@
+<view class="address">
+  <wux-button block type="light" bindtap="toAddNewAddress">添加新地址</wux-button>
+
+  <view class="layout-row card" wx:for="{{address}}" data-index="{{index}}" bindtap="chooseAddress">
+    <view class="layout-col texts">
+      <view class="layout-row">
+        <view class="name">{{item.name}}</view>
+        <view class="phone">{{item.phone}}</view>
+      </view>
+      <view class="address">
+      {{item.address}}
+      </view>
+    </view>
+    <view class="btn-edit" data-index="{{index}}" data-id="{{item._id}}" catchtap="deleteAddress">删除</view>
+  
+  </view>
+</view>

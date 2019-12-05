@@ -1,0 +1,61 @@
+<view class="cards">
+
+  <view class="radio-group">
+    <checkbox-group bindchange="changeRadioStyle">
+      <label class="card" wx:for="{{newCard}}">
+
+        <view>
+          <checkbox value="{{index}}" checked="{{item.checked}}" />
+          <text class="seller">{{item.seller}}</text>
+        </view>
+        <view class="main">
+          <image class="icon" mode="aspectFill" src="{{item.imgUrl[0]}}"></image>
+          <view class="texts">
+            <text>{{item.title}}</text>
+            <view class="layout-row sku">
+              <view class="item" wx:for="{{item.ssku}}" wx:for-index="key">
+                <text> {{key}}:{{item}}</text>
+              </view>
+            </view>
+
+            <view class="bom">
+              <text class="price">￥{{item.price}}</text>
+              <view class="number">
+                <view class="increase" data-id="{{item._id}}" data-index="{{index}}" catchtap="numReduce">-</view>
+                <view class="num">{{item.num}}</view>
+                <view class="reduce" data-id="{{index}}" catchtap="numIncrease">+</view>
+
+              </view>
+            </view>
+          </view>
+        </view>
+      </label>
+    </checkbox-group>
+    <!-- <radio-group wx:for="{{newCard}}" wx:key="item{{item.id}}">
+      <radio class="radio" class="card" value="{{item.id}}" checked="{{item.checked}}" data-id="{{index}}" catchtap="changeRadioStyle">
+       
+
+      </radio>
+    </radio-group> -->
+  </view>
+
+  <view class="bottomBar">
+    <view class="selectAll">
+      <radio-group>
+        <radio bindtap="changeSelectAll" checked="{{selectAll}}" color="#ff0000">全选</radio>
+      </radio-group>
+    </view>
+    <view class="submitBox">
+      <text>
+      不含运费
+      </text>
+      <text class="zong">
+      总计:
+      </text>
+      <text class="price">
+      ￥{{allMoney}}
+      </text>
+      <view class="btn-submit btn_sub" bindtap="tobuy">结算</view>
+    </view>
+  </view>
+</view>

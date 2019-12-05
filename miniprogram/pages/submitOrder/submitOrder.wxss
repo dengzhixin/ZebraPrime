@@ -1,0 +1,97 @@
+.submitOrderBox{
+  margin-bottom: 100rpx;
+}
+.address {
+  background-color: white;
+  margin-bottom: 20rpx;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.address .icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+.iconDw{
+  margin: 20rpx;
+
+}
+.address .texts{
+  font-size: 10pt;
+  flex: 1;
+  padding-right: 10rpx;
+}
+.address .texts .names{
+  justify-content: space-between;
+}
+.address .texts .detailAddress{
+  font-size: 8pt
+}
+.icon-small{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.products image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.products .product{
+  background-color: white;
+  margin-bottom: 10rpx;
+  padding: 20rpx;
+}
+.products .product .texts{
+  font-size: 10pt;
+  flex: 1;
+  justify-content: space-between;
+  padding-left: 20rpx;
+}
+.products .product .texts .prices{
+  justify-content: space-between
+
+}
+.products .product .texts .price{
+  color: red;
+}
+.buyerMessage{
+  padding: 20rpx;
+  background-color: white;
+}
+.buyerMessage .input{
+  padding: 10rpx;
+  flex: 1;
+}
+.buyerMessage .tag{
+  margin-right: 20rpx;
+  color: rgba(0, 0, 0, 0.5)
+}
+
+.card{
+  padding: 20rpx;
+  background-color: wheat;
+}
+.submitOrderBar{
+  padding: 0;
+}
+.submitOrderBar .texts{
+  padding: 20rpx;
+}
+.submitOrderBar .texts .deduction{
+  font-size: 8pt;
+  color: gray;
+  line-height: 20pt;
+  margin-left: 10rpx;
+}
+.submitOrder{
+  height: 100rpx;
+  width: 350rpx;
+
+  line-height: 100rpx;
+  border-radius: 0;
+  padding: 0 20rpx;
+}
+.sku text{
+  margin-right:20rpx;
+  color: rgba(0, 0, 0, 0.5)
+}

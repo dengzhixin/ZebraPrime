@@ -1,0 +1,141 @@
+<view class="skuSelectorBox layout-col" style="display:{{viewSkuSelector?'flex':'none'}}" bindtap="closeSkuSelector">
+
+  <view class="skuSelector" catchtap="none">
+    <image class="iconImg" src="{{product.imgUrl[0]}}"></image>
+    <view class="current layout-row">
+      <view wx:for="{{currenSku}}" wx:for-index="key">
+        <text> {{key}}:{{item}}</text>
+      </view>
+
+    </view>
+    <view class="layout-col" wx:for="{{product.sku}}" wx:for-item="skuItem" wx:for-index="key" class="layout-row sku">
+
+      <view class="key">{{key}}</view>
+      <view data-key="{{key}}" data-value="{{val}}" class="item" wx:for="{{skuItem}}" wx:for-item="val" catchtap="updataCurrentSku">
+        {{val}}
+      </view>
+    </view>
+  </view>
+
+</view>
+<view>
+  <view class="product">
+    <swiper class="productImg" circular="true">
+      <swiper-item wx:for="{{product.imgUrl}}">
+        <image mode="aspectFill" src="{{item}}"></image>
+      </swiper-item>
+    </swiper>
+    <view class="priceBox">
+      <image mode="aspectFill" class="bg" src="../../images/zebraBg.png"></image>
+
+      <view class="left">
+        <view class="content">
+          <text class="price">￥{{product.price}}</text>
+          <view class="texts">
+            <text class="oldPrice">价格<text class="num">￥{{product.oldPrice}}</text></text>
+            <text class="near">近期销量{{product.sellNumber}}</text>
+          </view>
+        </view>
+
+      </view>
+      <view class="right">
+        <image mode="aspectFit" src="../../images/miaosha.png"></image>
+      </view>
+    </view>
+    <view class="card title">{{product.title}}</view>
+
+    <view class="card" wx:if="{{product.integral>0}}">
+      <view>
+        <view class="left">
+          积分
+          <view class="content">
+            下单最多可返
+            <view style="color:red">{{product.integral}}</view>积分
+          </view>
+        </view>
+
+      </view>
+
+
+
+    </view>
+    <view class="card" wx:if="{{product.maxDeduction>0}}">
+      <view>
+        <view class="left">
+          抵扣
+          <view class="content">
+            下单最多抵扣
+            <view style="color:red">{{product.maxDeduction}}</view>元
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view class="card" wx:if="{{product.sku}}" bindtap="openSkuSelector">
+        <view class="left">
+          颜色分类
+          <view class="content">
+            <view style="margin-right:10rpx" wx:for="{{currenSku}}" wx:for-index="key">
+              <text> {{key}}:{{item}}</text>
+            </view>
+
+          </view>
+        </view>
+        <view class="right">
+        >
+        </view>
+
+    </view>
+
+    <view class="card tags" wx:if="{{product.tag.length>0}}">
+      <view>
+        <view class="left">
+          标签
+          <view class="content">
+            <view class="tag" wx:for="{{product.tag}}">{{item}}</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <!-- <view class="card">
+    <view class="seller">{{product.seller}}</view>
+    <view>
+      <view class="left"></view>
+    </view>
+    <view class="right">
+      >
+    </view>
+  </view> -->
+
+    <view class="productCard productInfo" wx:if="{{product.productInfo}}">
+      <text class="subTitle">商品信息</text>
+
+      <view class="content">
+
+        <view class="table">
+          <view class="row" wx:for="{{product.productInfo}}" wx:for-index='key'>
+            <view class="col key">{{key}}</view>
+            <view class="col value">{{item}}</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view class="productCard productDetail">
+      <text class="subTitle">图文详情</text>
+      <view class="content">
+        {{}}
+        <rich-text nodes="{{product.content}}"></rich-text>
+
+      </view>
+
+    </view>
+  </view>
+
+
+  <view class="bottomBar buyBar">
+    <view class="btn-submit btn-buy btn-black" data-id="{{product._id}}" bindtap="addCart">加入购物车</view>
+    <view class="btn-submit btn-buy marginRight" data-id="{{product._id}}" bindtap="tobuy">立即购买</view>
+  </view>
+</view>
